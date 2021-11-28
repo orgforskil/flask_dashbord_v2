@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" class="h-100">
+    <head>
+        {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.88.1">
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link>
+        <meta name="theme-color" content="#7952b3">
+
+        {% endblock %}
+    </head>
+    <body class="d-flex flex-column h-100">
+        <header class="p-3 bg-dark text-white">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAABrklEQVRYhe2XPUvDUBSGT2qri4gKukkpdnMTh6L+hUI7CE52c3V0dXTU0dVB3Du6OHRwcHBxaDsIDmpBRQp+Fvs45ASvMR9NTAWxLwRuknPO+9yb5N4bkYH+u6y4iUBGRFb19NCyrE4ySOHGY8AGcMmnroEtYLKfxjlgB2gbxmd6OGprTC5J43lgH+gYRjWgCFgaswxUga7ef9fzxbimKTU4MkxfFGQuIC8P7AKPRt4psAYMRQFoGgVa+nynI+RPa07LqNP0ik351Mgb7ScRuRKR+557IHIrIuci8uBTM1gmtatdAdIBeWmNcecBEAcgBawAdePaBbBugoTFxQbooWeVgOtpv3qRAUJ66jsyiQMY950RcRT2biQLkGSc32f4axoABAIAwz81CKsRNgIN7IUk1sYFKIo9JUdOLLm+9RpQ8Ijzmy8KmuOoDpSiQmR0YrkxClWBWT8AYAZ7yXb2BXfAJjAScQy+gIxiL63PWvQN2AOmDLAJYNuIecXeF4zHNvYAyQIHrt7hanc1JpuYsQfIAnDMd50AS30z9gApAw09yr9m7ILIYP8fDPR39QEqJkI7aAtiQQAAAABJRU5ErkJggg=="/>
+
+                    </a>
+
+                    {% include 'asserts/menu.html.' %}
+                </div>
+            </div>
+        </header>
+        <main class="flex-shrink-0">
+            <div class="container">{% block content %}{% endblock %}</div>
+        </main>
+
+
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="container">
+                <span class="text-muted">{% block footer %}&copy; 2021{% endblock %}</span>
+            </div>
+        </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+    </body>
+</html>
